@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>List</h1>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Order Number
+        </th>
+        <th>
+
+        </th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.TotalOrder
+            </td>
+            <td>
+                <a href="/Category/Edit/@item.Id">Deatils</a>
+                <a href="/Category/Delete/@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+

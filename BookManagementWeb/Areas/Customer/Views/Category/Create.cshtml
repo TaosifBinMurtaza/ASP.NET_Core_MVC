@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+@Html.ValidationSummary()
+<form action="" method="post">
+    
+    Name:<br />
+    <input type="text" name="Name" class="form-control" />
+    @Html.ValidationMessage("Name")<br /><br />
+    Order:<br />
+    <input type="text" name="TotalOrder" class="form-control" /><br /><br />
+    Date:
+    <input type="date" name="CreatedAt" class="form-control" /><br /><br />
+
+    <input type="submit" value="Create" class="btn btn-success" />
+    <a asp-controller="Category" asp-action="Index" class="btn btn-dark">List</a>
+
+</form>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

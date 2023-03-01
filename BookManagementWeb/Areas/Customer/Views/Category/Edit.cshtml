@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+<form action="" method="post">
+
+    Name:<br />
+    <input type="text" name="Name" class="form-control" value="@Model.Name" />
+   <br /><br />
+    Order:<br />
+    <input type="text" name="TotalOrder" class="form-control" value="@Model.TotalOrder" /><br /><br />
+    Date:
+    <input type="date" name="CreatedAt" class="form-control" value="@Model.CreatedAt.ToString("yyyy-MM-dd")" /><br /><br />
+
+    <input type="submit" value="Create" class="btn btn-success" />
+    <a asp-controller="Category" asp-action="Index" class="btn btn-dark">List</a>
+
+</form>
+
